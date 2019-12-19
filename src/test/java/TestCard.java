@@ -1,4 +1,4 @@
-import com.codeborne.selenide.SelenideElement;
+
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exactText;
@@ -27,7 +27,6 @@ public class TestCard {
         $("[data-test-id = phone] input").setValue("+79204444444");
         $("[class = checkbox__box]").click();
         $("[role = button]").click();
-        //$("[data-test-id = name], [class = input_sub]").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только " +
         $(byText("Имя и Фамилия указаные неверно. Допустимы только " +
                 "русские буквы, пробелы и дефисы.")).shouldBe(visible);
     }
